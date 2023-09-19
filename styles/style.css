@@ -56,6 +56,9 @@ html:not(.light) .ph-moon{
     appearance: none;
 }
 
+
+
+
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
