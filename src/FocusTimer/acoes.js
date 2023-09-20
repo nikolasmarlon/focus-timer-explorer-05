@@ -1,5 +1,5 @@
 import estado from "./estado.js"
-
+import * as timer from './timer.js'
 
 export function toggleRunning (){
 
@@ -8,6 +8,8 @@ export function toggleRunning (){
 
     // outra forma de fazer
     estado.estaRodando = document.documentElement.classList.toggle('running') // o toggle retorna verdadeiro ou falso 
+
+    timer.countdown()
 }
 
 export function set (){

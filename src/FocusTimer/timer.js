@@ -1,6 +1,24 @@
 import estado from "./estado.js";
 import * as elementos from './elementos.js'
 
+
+
+
+export function countdown (){
+
+    // verificar se o estado nao está rodando
+    if(!estado.estaRodando){
+        return
+    }
+    console.log('Menos um segundo')
+
+    setTimeout(() => {
+        countdown()
+    }, 1000);
+
+    
+}
+
 export function updateDisplay(minutes, seconds){
 
         // Nullish coalising operator
