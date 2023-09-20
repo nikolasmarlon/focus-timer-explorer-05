@@ -1,6 +1,8 @@
 import estado from "./estado.js"
 import * as timer from './timer.js'
 
+import * as elementos from './elementos.js'
+
 export function toggleRunning (){
 
     //recebe o contrário do estado atual sempre que chamada esta função
@@ -13,7 +15,9 @@ export function toggleRunning (){
 }
 
 export function set (){
-    console.log('set')
+    // quando clicar no botão de cronometro
+
+    elementos.minutos.setAttribute('contenteditable', true)
 }
 
 export function reset (){
