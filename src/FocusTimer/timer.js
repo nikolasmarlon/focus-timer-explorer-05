@@ -6,6 +6,9 @@ import { kichenTimer } from "./sounds.js";
 
 export function countdown (){
 
+    // toda vez que inicar limpamos o timeout
+    clearTimeout(estado.countdownId)
+
     // verificar se o estado nao está rodando
     if(!estado.estaRodando){
         return
@@ -31,9 +34,7 @@ export function countdown (){
     
     updateDisplay(minutos, segundos)
 
-    setTimeout(() => {
-        countdown()
-    }, 1000);
+    estado.countdownId = setTimeout(() => countdown(), 1000);
 
     
 }
