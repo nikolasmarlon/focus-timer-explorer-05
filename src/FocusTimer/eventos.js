@@ -27,4 +27,10 @@ export function setMinutes() {
     elementos.minutos.addEventListener('focus', () => {
         elementos.minutos.textContent = ''
     })
+
+    elementos.minutos.onkeypress = (evento) => 
+        //expresão regular tudo que nao for número retorna false
+        /\d/.test(evento.key)
+    
+
 }   
