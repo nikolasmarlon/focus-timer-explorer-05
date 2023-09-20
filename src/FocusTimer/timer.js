@@ -1,6 +1,6 @@
 import estado from "./estado.js";
 import * as elementos from './elementos.js'
-
+import { reset } from './acoes.js'
 
 
 
@@ -10,7 +10,24 @@ export function countdown (){
     if(!estado.estaRodando){
         return
     }
-    console.log('Menos um segundo')
+    
+
+    let minutos = Number(elementos.minutos.textContent)
+    let segundos = Number(elementos.segundos.textContent)
+
+    segundos--
+
+    if(segundos < 0){
+        segundos = 59
+        minutos--
+    } 
+    
+    if(minutos < 0){
+        reset()
+        return
+    }
+
+    updateDisplay(minutos, segundos)
 
     setTimeout(() => {
         countdown()

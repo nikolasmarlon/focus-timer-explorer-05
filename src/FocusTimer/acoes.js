@@ -20,6 +20,8 @@ export function reset (){
     estado.estaRodando = false
 
     document.documentElement.classList.remove('running')
+
+    timer.updateDisplay() // voltar para o estado inicial do timer
 }
 
 export function toggleMusic (){
