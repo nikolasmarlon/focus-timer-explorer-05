@@ -2,16 +2,18 @@
 
 import { controles } from "./elementos.js"
 
+import * as actions from './acoes.js'
+
 export function registroEventoControles(){
 
     controles.addEventListener('click', (evento) =>{
         
         const action = evento.target.dataset.action
 
-        if (action === undefined){
+        if (typeof actions[action] != "function"){
             return
         }
 
-        console.log(action)
+        actions[action]()
     })
 }
