@@ -1,5 +1,13 @@
+import estado from "./estado.js"
+
+
 export function toggleRunning (){
-    console.log('toggle nunning function')
+
+    //recebe o contrário do estado atual sempre que chamada esta função
+    //estado.estaRodando = !estado.estaRodando // primeira forma de fazer 
+
+    // outra forma de fazer
+    estado.estaRodando = document.documentElement.classList.toggle('running') // o toggle retorna verdadeiro ou falso 
 }
 
 export function set (){
@@ -7,10 +15,17 @@ export function set (){
 }
 
 export function reset (){
-    console.log('reset')
+    estado.estaRodando = false
+
+    document.documentElement.classList.remove('running')
 }
 
 export function toggleMusic (){
-    console.log('toggleMusic')
+   
+    //recebe o contrário do estado atual sempre que chamada esta função
+    //estado.estaMudo = !estado.estaMudo // primeira forma de fazer 
+
+    // outra forma de fazer
+    estado.estaMudo= document.documentElement.classList.toggle('music-on') // o toggle retorna verdadeiro ou falso 
 }
 
