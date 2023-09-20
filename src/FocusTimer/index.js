@@ -12,4 +12,5 @@ export function start(minutes, seconds) {
     timer.updateDisplay()
 
     eventos.registroEventoControles()
+    eventos.setMinutes()
 }

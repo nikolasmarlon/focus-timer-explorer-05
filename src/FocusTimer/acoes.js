@@ -18,6 +18,8 @@ export function set (){
     // quando clicar no botão de cronometro
 
     elementos.minutos.setAttribute('contenteditable', true)
+    elementos.minutos.focus()
+    
 }
 
 export function reset (){
