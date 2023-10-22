@@ -1,5 +1,5 @@
 export default {
-    minutos: 25,
+    minutos: 0,
     segundos: 0,
     estaRodando: false,
     estaMudo: true,
